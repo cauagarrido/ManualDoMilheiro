@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Manual do Milheiro Iniciante</title>
+
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>MANUAL DO<br><span class="highlight-text">MILHEIRO</span></h1>
+                <div class="subtitle">iniciante</div>
+
+                <div class="ebook-mockup">
+                    <div class="ebook-cover">
+                        <div class="ebook-title-placeholder">MANUAL DO MILHEIRO</div>
+                        <div class="ebook-icon-placeholder">✈️</div>
+                    </div>
+                </div>
+
+                <p>Um manual criado para ajudar as pessoas que possuem baixa renda e sonham em viajar pagando pouco.
+                    Chega de ficar perdido procurando informações em vários lugares sobre os programas de milhas, pois
+                    nesse material, de preço acessível, você tem tudo reunido em um só lugar.</p>
+
+                <a href="#comprar" class="cta-button">EU QUERO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 1 - Travel Benefits -->
+    <section class="panel-1">
+        <div class="container">
+            <div class="panel-content">
+                <div class="carousel-container">
+                    <div class="carousel" id="carousel">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop"
+                            alt="Viagem Europa" />
+                        <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=500&h=400&fit=crop"
+                            alt="Praia paradisíaca" />
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop"
+                            alt="Montanhas" />
+                        <img src="https://images.unsplash.com/photo-1551524164-6cf2ac921fb4?w=500&h=400&fit=crop"
+                            alt="Cidade moderna" />
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=400&fit=crop"
+                            alt="Natureza" />
+                    </div>
+                    <div class="carousel-nav">
+                        <div class="nav-dot active" onclick="showSlide(0)"></div>
+                        <div class="nav-dot" onclick="showSlide(1)"></div>
+                        <div class="nav-dot" onclick="showSlide(2)"></div>
+                        <div class="nav-dot" onclick="showSlide(3)"></div>
+                        <div class="nav-dot" onclick="showSlide(4)"></div>
+                    </div>
+                </div>
+
+                <div class="panel-text">
+                    <h2>O melhor jeito de acumular milhas</h2>
+                    <p>Você vai saber como acumular corretamente pontos que se transformarão em milhas e como
+                        multiplicá-los para poder realizar o sonho de conhecer lugares incríveis por preços muito mais
+                        acessíveis.</p>
+                </div>
+            </div>
+        </div>
+        <section style="padding: 80px 0; background: #f8f9fa;">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2F4F4F;">Veja o que você
+                    terá acesso ao adquirir o manual</h2>
+                <div class="benefits">
+                    <div class="benefit-box"
+                        style="background: white; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <h4 style="color: #8FBC8F;">Programa de fidelidade dos bancos</h4>
+                        <p>Aprenda a usar os cartões de crédito de forma inteligente para acumular pontos.</p>
+                    </div>
+                    <div class="benefit-box"
+                        style="background: white; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <h4 style="color: #8FBC8F;">Programa de fidelidade das cias aéreas</h4>
+                        <p>Descubra como maximizar suas milhas com programas das companhias aéreas.</p>
+                    </div>
+                    <div class="benefit-box"
+                        style="background: white; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <h4 style="color: #8FBC8F;">Como multiplicar seus pontos</h4>
+                        <p>Estratégias avançadas para fazer seus pontos renderem muito mais.</p>
+                    </div>
+                    <div class="benefit-box"
+                        style="background: white; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <h4 style="color: #8FBC8F;">Exemplos práticos para pagar mais barato</h4>
+                        <p>Cases reais de como economizar milhares em viagens.</p>
+                    </div>
+                    <div class="benefit-box"
+                        style="background: white; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <h4 style="color: #8FBC8F;">Bônus sobre Hospedagem</h4>
+                        <p>Dicas exclusivas para conseguir hospedagens com desconto ou gratuitas.</p>
+                    </div>
+                    <div class="benefit-box"
+                        style="background: white; color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <h4 style="color: #8FBC8F;">Bônus sobre Cartão de Crédito</h4>
+                        <p>Guia completo dos melhores cartões para acúmulo de milhas.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="#comprar" class="cta-button" id="comprar">QUERO COMPRAR O MANUAL</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Panel 2 - Dream Section -->
+    <section class="panel-2">
+        <div class="container">
+            <div class="dream-content">
+                <div class="dream-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop"
+                        alt="Montanhas nevadas" />
+                </div>
+
+                <div class="dream-text">
+                    <h2>Eu sei como é querer viajar para os destinos dos sonhos, mas não poder ir depois de calcular
+                        todos os gastos...</h2>
+
+                    <p>Já estive no seu lugar e sei das dificuldades de querer viajar em todas as férias, mas não poder
+                        ir ao ver os altos preços das passagens aéreas. Foi por isso que criei esse manual para te
+                        ajudar a diminuir os gastos de sua tão sonhada viagem.</p>
+
+                    <div class="price-highlight">
+                        <p>No Manual do Milheiro Iniciante você também vai aprender que acumular milhas vai além de
+                            comprar passagens aéreas. Você vai poder ter uma viagem completa muito mais barata, pois
+                            também abrange hospedagens, passeios e muito mais.</p>
+
+                        <div class="price">
+                            Sua viagem internacional já é uma realidade adquirindo o Manual por apenas R$59,90.
+                        </div>
+                    </div>
+
+                    <a href="#comprar" class="cta-button">EU QUERO REALIZAR MEU SONHO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+
+    <!-- Footer - Author Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="author-content">
+                <div class="author-images">
+                    <div class="author-image">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=200&h=200&fit=crop"
+                            alt="Vanessa viajando" />
+                    </div>
+                </div>
+
+                <div class="author-text">
+                    <h3>Quem é Vanessa Rabelo?</h3>
+                    <p>Soteropolitana, 31 anos, formada em Ciências Contábeis, uma CLT que ama viajar e que já acumulou
+                        mais de 1 milhão de milhas.</p>
+
+                    <p>Graças ao mundo das milhas, Vanessa tem a oportunidade de anualmente conhecer um lugar novo, seja
+                        no Brasil ou fora dele.</p>
+
+                    <p>Criou o <strong>Manual do Milheiro Iniciante</strong> no intuito de ajudar você a começar a
+                        acumular milhas para diminuir seus gastos nas viagens. Com isso, você vai aproveitar muito mais
+                        e realizar seus sonhos de conhecer novos lugares.</p>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div>
+                        <h4 style="color: #9ACD32; margin-bottom: 1rem;">Para quem é o manual?</h4>
+                        <p style="font-size: 0.9rem;">Para viajantes que querem diminuir os custos de suas viagens e
+                            realizar o sonho de conhecer novos lugares com mais frequência.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #9ACD32; margin-bottom: 1rem;">Como esse investimento me ajuda a economizar?
+                        </h4>
+                        <p style="font-size: 0.9rem;">Por apenas R$59,90 você vai aprender sobre o mundo das milhas para
+                            sempre, te ajudando a emitir passagens pagando apenas a taxa de embarque utilizando as
+                            estratégias ensinadas no Manual.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #9ACD32; margin-bottom: 1rem;">Vou ter suporte se comprar o guia?</h4>
+                        <p style="font-size: 0.9rem;">Caso você ainda tenha dúvidas após a leitura do manual, você pode
+                            enviar sua pergunta no nosso e-mail para os clientes.</p>
+                    </div>
+                </div>
+
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">
+                    Política de Privacidade | Termos de Uso<br>
+                    © 2025 - Manual do Milheiro Iniciante - Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+
+
+</body>
+
+</html>

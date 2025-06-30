@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.hero {
+    background: linear-gradient(135deg, #8FBC8F 0%, #9ACD32 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="plane" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M10,25 L40,25 M25,10 L25,40" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></pattern></defs><rect width="100" height="100" fill="url(%23plane)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.hero .subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #FFE4E1;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #2F4F4F;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: #1C3A3A;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.devices-mockup {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.devices-mockup img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Panel 1 - Travel Carousel */
+.panel-1 {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.panel-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.carousel-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+.panel-text h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #2F4F4F;
+    line-height: 1.2;
+}
+
+.panel-text p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.panel-2 {
+    padding: 60px 0; /* Padding vertical pode ser ajustado conforme necessário */
+    background: linear-gradient(135deg, #8FBC8F 0%, #9ACD32 100%);
+    color: white;
+}
+
+.dream-content {
+    /* 1. Ativa o layout flexível */
+    display: flex;
+    
+    /* 2. Alinha os itens verticalmente ao centro */
+    align-items: center;
+
+    /* 3. Cria um espaço de 50px entre a imagem e o texto */
+    gap: 50px; 
+
+    max-width: 1100px; /* Aumentei a largura máxima para acomodar o layout horizontal */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dream-image {
+    /* 4. Define o comportamento do item flexível: */
+    /* - flex-grow: 0 (não cresce) */
+    /* - flex-shrink: 0 (não encolhe) */
+    /* - flex-basis: 400px (largura base fixa) */
+    flex: 0 0 400px; 
+
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* A altura pode ser definida se necessário, mas com object-fit geralmente não precisa */
+}
+
+.dream-image img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.dream-text {
+    /* 5. Define que este item deve ocupar o espaço restante */
+    /* - flex-grow: 1 (ocupa o espaço disponível) */
+    flex: 1; 
+}
+
+.dream-text h2 {
+    font-size: 1.8rem; /* Leve ajuste para o novo layout */
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.dream-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.price-highlight {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 5px solid #FFE4E1;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #FFE4E1;
+    margin-top: 10px;
+}
+
+.dream-text .cta-button {
+    margin-top: 1.5rem; /* Ajuste na margem */
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .dream-content {
+        /* Muda a direção do flex para coluna em telas pequenas */
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .dream-image {
+        /* Permite que a imagem ocupe a largura total */
+        flex-basis: auto; 
+        width: 100%;
+        max-width: 400px; /* Limita a largura máxima da imagem em mobile */
+    }
+
+    .dream-text {
+        text-align: center;
+    }
+}
+
+.price-highlight {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border-left: 5px solid #FFE4E1;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFE4E1;
+}
+
+/* Footer - Author Section */
+.footer {
+    padding: 80px 0; /* Ajuste opcional de padding */
+    background: #2F4F4F;
+    color: white;
+    /* Adicione um padding nas laterais para o conteúdo não colar nas bordas */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.author-content {
+    display: grid;
+    /* Mantém a coluna da imagem com 300px de largura e o texto ocupa o resto */
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* O seletor .author-images foi REMOVIDO pois o elemento não existe mais no HTML */
+
+.author-image {
+    /* O container da imagem agora tem 300px de largura pela definição do grid acima */
+    border-radius: 15px; /* Mantém as bordas arredondadas */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.author-image img {
+    width: 100%;
+    height: 300px; /* Aumenta a altura para criar uma imagem grande de 300x300 */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block; /* Remove espaços em branco indesejados */
+}
+
+.author-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Margem ajustada */
+    color: #9ACD32;
+}
+
+.author-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Media Query para Responsividade --- */
+@media (max-width: 768px) {
+    .author-content {
+        /* Em telas menores, os itens ficam um em cima do outro */
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .author-image {
+        /* Centraliza a imagem que agora está em sua própria linha */
+        width: 250px; /* Define um tamanho fixo menor para mobile */
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .author-image img {
+        height: 100%; /* A imagem ocupa 100% da altura do seu container */
+    }
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 4rem 0;
+}
+
+.benefit-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-box:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-box h4 {
+    color: #9ACD32;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .panel-content,
+    .dream-content,
+    .author-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel img {
+        height: 250px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-out;
+}
