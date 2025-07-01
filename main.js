@@ -1,6 +1,6 @@
 
 let currentSlide = 0;
-const totalSlides = 5;
+const totalSlides = 13;
 
 function showSlide(index) {
     const carousel = document.getElementById('carousel');
