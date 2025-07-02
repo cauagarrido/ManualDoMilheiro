@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,27 +18,15 @@ body {
     padding: 0 20px;
 }
 
-/* Header Section */
-
-
-.logo {
-    display: block;
-    /* Faz com que cada imagem ocupe sua própria linha */
-    margin: 0 auto;
-    /* Centraliza a imagem horizontalmente */
-    margin-bottom: 20px;
-    /* Adiciona um espaço abaixo de cada imagem */
-    max-width: 250px;
-    /* Mantém o tamanho máximo que você definiu */
-}
-
 .hero {
     background: linear-gradient(135deg, #859b48 0%, #1d361f 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 3rem 0;
 }
 
 .hero::before {
@@ -50,35 +40,64 @@ body {
     opacity: 0.3;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    gap: 30px;            
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-weight: bold;
+
+.slogan {
+    max-width: 650px; 
+    width: 100%;
+    height: auto;
 }
 
-.hero .subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+.subtext {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px; 
     font-style: italic;
-    color: #FFE4E1;
+    color: #010101;
+    text-transform: uppercase;
+    font-family: "League Spartan", sans-serif;
+    text-shadow: #8e7f7f 3px 3px 4px;
 }
 
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8;
+
+.logo-text-container {
+    display: flex;
+    align-items: center; 
+    gap: 40px;          
+    width: 100%;         
 }
+
+.logo {
+    display: block;
+    max-width: 250px;
+    height: auto;
+}
+
+.main-text {
+    flex: 1; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center; 
+    
+}
+
 
 .cta-button {
     display: inline-block;
@@ -93,6 +112,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-top: 20px; 
 }
 
 .cta-button:hover {
@@ -101,17 +121,19 @@ body {
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
-.devices-mockup {
-    margin: 3rem 0;
-    text-align: center;
+
+@media (max-width: 768px) {
+    .logo-text-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .main-text {
+        text-align: center;
+    }
 }
 
-.devices-mockup img {
-    max-width: 100%;
-    height: auto;
-}
 
-/* Panel 1 - Travel Carousel */
 .panel-1 {
     padding: 100px 0;
     background: #f8f9fa;
@@ -181,8 +203,8 @@ body {
 
 .panel-2 {
     padding: 60px 0;
-    background: linear-gradient(135deg, #859b48 0%, #647c21 100%);
-    color: white;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f8f9fa 100%);
+    color: #1d361f;
 }
 
 .dream-content {
@@ -193,16 +215,16 @@ body {
     align-items: center;
 
 
-    gap: 50px;
+    gap: 40px;
 
-    max-width: 1100px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .dream-image {
 
-    flex: 0 0 400px;
+    flex: 0 0 600px;
 
     border-radius: 15px;
     overflow: hidden;
@@ -277,13 +299,13 @@ body {
     padding: 20px;
     border-radius: 15px;
     margin: 2rem 0;
-    border-left: 5px solid #FFE4E1;
+    border-left: 5px solid #8FBC8F;
 }
 
 .price {
     font-size: 2rem;
     font-weight: bold;
-    color: #FFE4E1;
+    color: #8FBC8F;
 }
 
 /* Footer - Author Section */
